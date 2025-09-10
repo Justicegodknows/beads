@@ -9,4 +9,9 @@ class Author extends Model
 {
     /** @use HasFactory<\Database\Factories\AuthorFactory> */
     use HasFactory;
+
+    public function articles()
+    {
+        return $this->hasMany(Article::class, 'article_id');
+    }
 }
