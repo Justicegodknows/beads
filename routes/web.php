@@ -1,7 +1,9 @@
 <?php
-
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
+
+Route::get('/articles', [ArticleController::class, 'index']);
 
 Route::get('/', function () {
     return view('welcome');

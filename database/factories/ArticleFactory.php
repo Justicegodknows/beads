@@ -21,7 +21,7 @@ class ArticleFactory extends Factory
             'title' => $this->faker->sentence(),
             'content' => $this->faker->paragraph(),
             'author_id' => Author::factory(),
-            'published_at' => $this->faker->date(),
+            'published' => $this->faker->date(),
 
             //
         ];
