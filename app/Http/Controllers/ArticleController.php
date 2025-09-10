@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use Illuminate\Http\Request;
 
 
 class ArticleController extends Controller
@@ -13,4 +14,9 @@ class ArticleController extends Controller
         return view('articles.index', compact('articles'));
     }
     //
+    public function show()
+    {
+        $articles = Article::all();
+        return view('articles.show', compact('articles'));
+    }
 }
