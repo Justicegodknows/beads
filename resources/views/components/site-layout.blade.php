@@ -12,6 +12,8 @@
         <a href="/articles">All articles</a>
         |
         <a href="/authors">All authors</a>
+        |
+        <a href="/productcategories">Product Categories</a>
     </div>
 </header>
 
@@ -22,7 +24,7 @@
 </main>
 
 
-<footer class="bg-blue-900 text-white mt-12 min-h-20">
+<footer class="bg-blue-900 text-white mt-100 min-h-20">
 
     <div class="max-w-6xl mx-auto px-20 py-4">
         Footer content

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\ProductCategoryController;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
@@ -12,6 +13,9 @@ Route::get('articles/{id}', [\App\Http\Controllers\ArticleController::class, 'sh
 
 Route::get('authors', [AuthorController::class, 'index']);
 Route::get('authors/{id}', [AuthorController::class, 'show']);
+
+Route::get('productcategories', [ProductCategoryController::class, 'index']);
+Route::get('productcategories/{id}', [ProductCategoryController::class, 'show']);
 
 
 
