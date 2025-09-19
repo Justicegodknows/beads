@@ -7,6 +7,7 @@ use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\LoginController;
 
 Route::get('articles', [\App\Http\Controllers\ArticleController::class, 'index'] );
 Route::get('articles/{id}', [\App\Http\Controllers\ArticleController::class, 'show']);
@@ -22,8 +23,6 @@ Route::get('authors/{id}', [AuthorController::class, 'show']);
 Route::get('productcategories', [ProductCategoryController::class, 'index']);
 Route::get('productcategories/{id}', [ProductCategoryController::class, 'show']);
 
-
-
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
@@ -37,4 +36,9 @@ Route::middleware(['auth'])->group(function () {
 
 });
 
-require __DIR__.'/auth.php';
+// Authentication routes
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+

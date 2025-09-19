@@ -4,17 +4,19 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="">
-<header class="max-w-6xl mx-auto bg-blue-500 text-xl text-white mb-4 flex items-center h-12">
+<header class="max-w-10xl mx-auto bg-blue-500 text-xl text-white mb-4 flex items-center h-12">
     <div class="mr-10">
-        My Bead shop
+       <a href="/">Beautiful African Beads</a>
     </div>
-    <div>
+</header>
+<header class="max-w-6xl mx-auto bg-blue-300 text-lg text-white mb-4 flex items-center h-10">
+    <ol>
         <a href="/articles">All articles</a>
         |
         <a href="/authors">All authors</a>
         |
         <a href="/productcategories">Product Categories</a>
-    </div>
+    </ol>
 </header>
 
 <main class="max-w-6xl mx-auto px-4 py-4">
