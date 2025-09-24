@@ -9,6 +9,9 @@ class Article extends Model
 {
     /** @use HasFactory<\Database\Factories\ArticleFactory> */
     use HasFactory;
+
+    protected $guarded=[];
+
   public function author()
     {
         return $this->belongsTo(User::class, 'author_id');

@@ -20,7 +20,7 @@ class ArticleController extends Controller
 
     }
 
-    public function show($id)
+    public function show()
     {
         // fetch the one article that is requested
         $article = \App\Models\Article::find($id);
@@ -33,5 +33,23 @@ class ArticleController extends Controller
     {
         return view('articles.create');
     }
+    
+    // store the article created and return its view
+    public function store(Request $request)
+    {
+        $article=Article::create([
+            'title'=>$request-> title,
+            'content'=>$request-> content,
+            'author_id' => 1, // quick fix
+            
+        ]);
+
+        return redirect()->route('articles.show', $article->id);
+
+      
+    
+    }
+
+
     //
 }
