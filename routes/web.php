@@ -8,10 +8,15 @@ use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+
+Route::get('/', function () {
+    return view('welcome');
+})->name('home');
 
 Route::get('articles', [\App\Http\Controllers\ArticleController::class, 'index'] );
-Route::get('articles/{id}', [\App\Http\Controllers\ArticleController::class, 'show']);
 Route::get('articles/create', [\App\Http\Controllers\ArticleController::class, 'create']);
+Route::get('articles/{id}', [\App\Http\Controllers\ArticleController::class, 'show']);
 Route::post('articles/store', [\App\Http\Controllers\ArticleController::class, 'store'])->name('articles.store');
 Route::get('articles/{id}/edit', [\App\Http\Controllers\ArticleController::class, 'edit']);
 Route::put('articles/{id}/update', [\App\Http\Controllers\ArticleController::class, 'update'])->name('articles.update');
@@ -23,9 +28,7 @@ Route::get('authors/{id}', [AuthorController::class, 'show']);
 Route::get('productcategories', [ProductCategoryController::class, 'index']);
 Route::get('productcategories/{id}', [ProductCategoryController::class, 'show']);
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
@@ -40,5 +43,11 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+// Registration routes
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'register']);
+
+
 
 

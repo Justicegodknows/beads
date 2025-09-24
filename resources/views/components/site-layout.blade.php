@@ -16,6 +16,8 @@
         <a href="/authors">All authors</a>
         |
         <a href="/productcategories">Product Categories</a>
+        |
+        <a href="/articles/create">Create Article</a>
     </ol>
 </header>
 
