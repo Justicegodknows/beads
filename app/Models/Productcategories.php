@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Productcategory extends Model
 {
-    /** @use HasFactory<\Database\Factories\ProductcategogryFactory> */
+    /** @use HasFactory<\Database\Factories\ProductcategoriesFactory> */
     use HasFactory;
     public function author()
     {

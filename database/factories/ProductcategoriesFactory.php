@@ -1,16 +1,16 @@
 <?php
 
 namespace Database\Factories;
-use App\Models\Productcategogry;
+use App\Models\Productcategory;
 use App\Models\Author;
 use App\Models\Article;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Productcategogry>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Productcategories>
  */
-class ProductcategogryFactory extends Factory
+class ProductcategoryFactory extends Factory
 {
     /**
      * Define the model's default state.

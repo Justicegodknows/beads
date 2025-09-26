@@ -17,6 +17,12 @@ class DatabaseSeeder extends Seeder
 
         // And then 20 articles
         \App\Models\Article::factory(20)->create();
+
+        // And 30 sold products
+        \App\Models\Productsold::factory(30)->create();
+
+        // 30 product category
+        \App\models\Productcategory::factory(30)->create();
     }
 
 }
